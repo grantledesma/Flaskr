@@ -12,7 +12,7 @@
     <article class="post">
       <header>
         <div>
-          <a class="section" href="{{ url_for('blog.get_view', id=post['id']) }}"> <h1>{{ post['title'] }}</h1> </a>
+         <h1>{{ post['title'] }}</h1> </a>
           <div class="about">by {{ post['username'] }} on {{ post['created'].strftime('%Y-%m-%d') }}</div>
         </div>
         {% if g.user['id'] == post['author_id'] %}
