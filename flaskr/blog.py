@@ -97,7 +97,7 @@ def delete(id):
 @bp.route('/<int:id>/view', methods=('GET','POST'))
 def get_view(id):
     db = get_db()
-    posts = db.execute('SELECT * FROM post WHERE id = ?', (id,)).fetchall()
+    posts = db.execute('SELECT * FROM post WHERE id = ?', (id,)).fetchone()
 
 
     return render_template('blog/view.html', post=posts)
